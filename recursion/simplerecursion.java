@@ -4,8 +4,7 @@ public class simplerecursion {
 
 	public static void main(String[] args) {
 		
-		decreasing(5);
-		increasing(5);
+		pdiskip(5);
 	}
 	public static void decreasing(int n)
 	{
@@ -25,6 +24,30 @@ public class simplerecursion {
 		increasing(n-1);
 		System.out.println(n);
 		
+	}
+	public static void incredecre(int n)
+	{
+		if(n<0)
+		{
+			return;
+		}
+		System.out.println(n);
+		incredecre(n-1);
+		System.out.println(n);
+	}
+	public static void pdiskip(int n)
+	{
+		if(n<=0)
+		{
+			return;
+		}
+		if(n%2!=0)
+		{
+			System.out.println(n);
+		}
+		pdiskip(n-1);
+		if(n%2==0)
+		System.out.println(n);
 	}
 	
 }
